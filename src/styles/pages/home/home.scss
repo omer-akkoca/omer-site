@@ -1,0 +1,116 @@
+*{
+    box-sizing: border-box;
+}
+
+.home-container{
+    height: 100vh;
+    width: 100vw;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    overflow: hidden;
+
+    @media (max-width:550px) {
+        flex-direction: column;
+    }
+
+
+    .intro-photo{
+        width: 40%;
+        height: auto;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        @media (max-width:950px) {
+            width: 50%;
+            margin-bottom: 15px;
+        }
+
+        @media (max-width:550px) {
+            width: 100%;
+            margin-bottom: 15px;
+        }
+
+        img{
+            width: 400px;
+            height: auto;
+            border-radius: 50%;
+            box-shadow: 5px 5px 8px rgba(0,0,0,0.8);
+
+            @media (max-width: 950px) {
+                width: 300px;
+            }
+
+            @media (max-width: 650px) {
+                width: 275px;
+            }
+
+            @media (max-width:500px) {
+                width: 250px;
+            }
+
+        }
+    
+    }
+
+    .intro-info{
+        width: 40%;
+        height: auto;
+        text-align: center;
+
+        @media (max-width:950px) {
+            width: 50%;
+        }
+
+        @media (max-width:550px) {
+            width: 100%;
+        }
+
+        h1{
+            font-size: 5em;
+            margin-bottom: 15px;
+            letter-spacing: 2px;
+
+            @media (max-width:950px) {
+                font-size: 3.5rem;
+            }
+
+            @media (max-width:500px) {
+                font-size: 2.5rem;
+            }
+
+        }
+
+        h3{
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+        }
+
+        button{
+            width: 200px;
+            height: 40px;
+            border: 0;
+            outline: 0;
+            background-color: black;
+            color: white;
+            border-radius: 40px;
+            cursor: pointer;
+            transition: all .3s ease;
+
+            &:hover{
+                box-shadow: 5px 5px 8px rgba(0,0,0,0.8);
+            }
+
+        }
+
+    }
+
+}

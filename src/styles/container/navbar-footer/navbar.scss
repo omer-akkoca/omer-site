@@ -1,0 +1,202 @@
+.navbar-container{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    z-index: 99999999999;
+    transition: all .3s ease;
+
+    @media (max-width:650px) {
+        background-color: #fff;
+    }
+
+    @media (max-width: 600px){
+        display: none;
+    }
+
+    &.navbar-scroll-container{
+        position: fixed;
+        background-color: #fff;
+        box-shadow: 8px 5px 10px rgba(0,0,0,0.6);
+    }
+
+    .logo{
+        height: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #000;
+        
+        h2{
+            font-size: 3.25rem;
+            text-shadow: 3px 3px rgba(0, 0, 0, 0.3);    
+        }
+    }
+
+
+    .navbar{
+        height: 100%;
+
+        a, .dropdown{
+            position: relative;
+            width: 150px;
+            transition: all .5s ease;
+
+            @media (max-width:650px) {
+                width: 125px;
+            }
+
+            &:hover{
+                background-color: white;
+            }
+
+            &::after{
+                content: "";
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                height: 2px;
+                width: 0;
+                background-color: black;
+                transition: width .3s ease;
+            }
+
+            &:hover::after{
+                width: 100%;
+            }
+        }
+
+        ul{
+            display: flex;
+            flex-direction: row;
+            height: 100%;
+            width: auto;
+
+            
+            li{
+                position: relative;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                height: 100%;
+                cursor: pointer;
+
+                .dropdown-menu{
+                    display: none;
+                    position: absolute;
+                    bottom: -200%;
+                    left: 0;
+                    height: 200%;
+                    flex-direction: column;
+                    background-color: #fff;
+
+                    a{
+                        height: 50%;
+
+                        li{
+                            text-align: center;
+                        }
+                    }
+
+                    &:hover{
+                        display: flex;
+                    }
+
+                }
+
+                &:hover .dropdown-menu{
+                    display: flex;
+                }
+            }
+
+            
+        }
+    }
+
+}
+
+.responsive-navbar-container{
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 50px;
+    justify-content: space-between;
+    background-color: white;
+    padding: 0 50px 0 25px;
+    z-index: 99999999999;
+    box-shadow: 8px 5px 10px rgba(0,0,0,0.6);
+
+    @media (max-width: 600px){
+        display: flex;
+    }
+
+    .logo{
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #000;
+
+        h2{
+            font-size: 3rem;
+            text-shadow: 3px 3px rgba(0, 0, 0, 0.3);    
+        }
+
+    }
+
+    .hamburger{
+        height: 100%;
+        display: flex;
+        align-items: center;
+        font-size: 25px;
+        cursor: pointer;
+    }
+
+    .responsive-navbar{
+        $width_and_botom : -350%;
+        position: absolute;
+        bottom: $width_and_botom;
+        left: 0;
+        height: $width_and_botom * -1;
+        width: 100%;
+        background-color: white;
+
+        ul{
+            width: 100%;
+            height: 100%;
+
+            li{
+                position: relative;
+                width: 100%;
+                height: 20%;
+                display: flex;
+                align-items: center;
+                padding-left: 15px;
+
+                &::after{
+                    content: "";
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    height: 2px;
+                    width: 0;
+                    background-color: black;
+                    transition: width .5s ease;
+                }
+
+                &:hover::after{
+                    width: 100%;
+                }
+
+            }
+        }
+
+    }
+
+}

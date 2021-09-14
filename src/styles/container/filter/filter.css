@@ -1,0 +1,88 @@
+.date {
+  width: 90%;
+  padding: 15px;
+  background-color: rgba(255, 166, 0, 0.363);
+  margin: 25px auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  overflow-x: hidden;
+}
+
+.date form {
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  grid-row-gap: 15px;
+  grid-column-gap: 15px;
+}
+
+.date form div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.date form div p {
+  margin-bottom: 8px;
+}
+
+.date form div input {
+  background-color: transparent;
+  border: 1px solid black;
+  text-align: center;
+  padding: 3px;
+  outline: none;
+}
+
+.date form div input::-webkit-datetime-edit-month-field::selection {
+  padding: 5px;
+}
+
+.date form div input::-webkit-datetime-edit-day-field {
+  padding: 5px;
+}
+
+.date form div input::-webkit-datetime-edit-year-field {
+  padding: 5px;
+}
+
+.date form button {
+  cursor: pointer;
+  border: 1px solid black;
+  padding: 8px;
+  -webkit-transition: .3s ease;
+  transition: .3s ease;
+  background-color: transparent;
+}
+
+.date form button:disabled {
+  cursor: no-drop;
+}
+
+.date form button:hover {
+  -webkit-box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
+}
+
+.date form button:disabled:hover {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+/*# sourceMappingURL=filter.css.map */

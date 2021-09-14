@@ -1,0 +1,132 @@
+.places-container {
+  position: relative;
+  width: 85%;
+  margin: 0 auto;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 25px;
+  padding: 50px 2.5% 75px 2.5%;
+}
+
+@media (max-width: 1050px) {
+  .places-container {
+    width: 90%;
+  }
+}
+
+@media (max-width: 950px) {
+  .places-container {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    grid-gap: 50px;
+  }
+}
+
+@media (max-width: 650px) {
+  .places-container {
+    padding: 25px 0 75px 0;
+  }
+}
+
+@media (max-width: 500px) {
+  .places-container {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    padding: 25px 5% 75px 5%;
+    grid-gap: 25px;
+  }
+}
+
+.places-container .place {
+  position: relative;
+  height: auto;
+  overflow: hidden;
+}
+
+.places-container .place i {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.places-container .place img {
+  width: 100%;
+  height: 100%;
+}
+
+.places-container .place .place-info {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
+  -webkit-transition: -webkit-transform .3s ease;
+  transition: -webkit-transform .3s ease;
+  transition: transform .3s ease;
+  transition: transform .3s ease, -webkit-transform .3s ease;
+  text-align: center;
+  padding: 25px;
+  overflow-y: auto;
+  cursor: auto;
+}
+
+.places-container .place .place-info h2 {
+  color: #fff;
+  font-size: 20px;
+  margin-bottom: 15px;
+  font-weight: normal;
+}
+
+@media (max-width: 500px) {
+  .places-container .place .place-info h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+}
+
+.places-container .place .place-info h4 {
+  color: #fff;
+  font-size: 16px;
+  margin-bottom: 20px;
+  font-weight: normal;
+}
+
+@media (max-width: 500px) {
+  .places-container .place .place-info h4 {
+    margin-bottom: 10px;
+  }
+}
+
+.places-container .place .place-info p {
+  color: #fff;
+  font-size: 14px;
+  font-weight: normal;
+}
+
+@media (max-width: 500px) {
+  .places-container .place .place-info p {
+    font-size: 12px;
+  }
+}
+
+.places-container .place .place-info .cancel {
+  color: white;
+}
+/*# sourceMappingURL=places-visited.css.map */

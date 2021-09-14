@@ -1,0 +1,152 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: monospace;
+  font-size: 16px;
+  font-weight: bolder;
+  text-decoration: none;
+  list-style-type: none;
+  color: black;
+}
+
+*::-webkit-scrollbar {
+  width: 5px;
+}
+
+*::-webkit-scrollbar-track {
+  background: black;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: white;
+  border: 2px solid black;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  width: 100vw;
+  height: auto;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+#root {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.page-top {
+  position: relative;
+  width: 100%;
+  height: 650px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-bottom: 2px solid black;
+}
+
+@media (max-width: 650px) {
+  .page-top {
+    height: 350px;
+  }
+}
+
+.page-top .page-top-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  -webkit-filter: blur(2px);
+          filter: blur(2px);
+  z-index: 5;
+  background-attachment: fixed;
+}
+
+.page-top .content {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 35px;
+  z-index: 10;
+}
+
+@media (max-width: 850px) {
+  .page-top .content {
+    width: 75%;
+  }
+}
+
+@media (max-width: 650px) {
+  .page-top .content {
+    width: 100%;
+    height: 100%;
+    padding: 50px 15px 15px 15px;
+  }
+}
+
+@media (max-width: 550px) {
+  .page-top .content {
+    padding-top: 50px;
+  }
+}
+
+.page-top .content p {
+  font-size: 16px;
+  font-weight: bolder;
+  line-height: 2rem;
+  margin-bottom: 25px;
+  color: #fff;
+}
+
+@media (max-width: 650px) {
+  .page-top .content p {
+    font-size: 14px;
+  }
+}
+
+.page-top .content button {
+  width: 350px;
+  padding: 8px 20px;
+  cursor: pointer;
+  font-weight: normal;
+  font-size: 14px;
+  border: 1px solid black;
+  outline: 0;
+}
+
+@media (max-width: 550px) {
+  .page-top .content button {
+    width: 200px;
+    padding: 3px 15px;
+  }
+}
+/*# sourceMappingURL=app.css.map */

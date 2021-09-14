@@ -1,0 +1,253 @@
+.navbar-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  z-index: 99999999999;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+}
+
+@media (max-width: 650px) {
+  .navbar-container {
+    background-color: #fff;
+  }
+}
+
+@media (max-width: 600px) {
+  .navbar-container {
+    display: none;
+  }
+}
+
+.navbar-container.navbar-scroll-container {
+  position: fixed;
+  background-color: #fff;
+  -webkit-box-shadow: 8px 5px 10px rgba(0, 0, 0, 0.6);
+          box-shadow: 8px 5px 10px rgba(0, 0, 0, 0.6);
+}
+
+.navbar-container .logo {
+  height: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #000;
+}
+
+.navbar-container .logo h2 {
+  font-size: 3.25rem;
+  text-shadow: 3px 3px rgba(0, 0, 0, 0.3);
+}
+
+.navbar-container .navbar {
+  height: 100%;
+}
+
+.navbar-container .navbar a, .navbar-container .navbar .dropdown {
+  position: relative;
+  width: 150px;
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
+}
+
+@media (max-width: 650px) {
+  .navbar-container .navbar a, .navbar-container .navbar .dropdown {
+    width: 125px;
+  }
+}
+
+.navbar-container .navbar a:hover, .navbar-container .navbar .dropdown:hover {
+  background-color: white;
+}
+
+.navbar-container .navbar a::after, .navbar-container .navbar .dropdown::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 0;
+  background-color: black;
+  -webkit-transition: width .3s ease;
+  transition: width .3s ease;
+}
+
+.navbar-container .navbar a:hover::after, .navbar-container .navbar .dropdown:hover::after {
+  width: 100%;
+}
+
+.navbar-container .navbar ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  height: 100%;
+  width: auto;
+}
+
+.navbar-container .navbar ul li {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.navbar-container .navbar ul li .dropdown-menu {
+  display: none;
+  position: absolute;
+  bottom: -200%;
+  left: 0;
+  height: 200%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #fff;
+}
+
+.navbar-container .navbar ul li .dropdown-menu a {
+  height: 50%;
+}
+
+.navbar-container .navbar ul li .dropdown-menu a li {
+  text-align: center;
+}
+
+.navbar-container .navbar ul li .dropdown-menu:hover {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.navbar-container .navbar ul li:hover .dropdown-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.responsive-navbar-container {
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: 50px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: white;
+  padding: 0 50px 0 25px;
+  z-index: 99999999999;
+  -webkit-box-shadow: 8px 5px 10px rgba(0, 0, 0, 0.6);
+          box-shadow: 8px 5px 10px rgba(0, 0, 0, 0.6);
+}
+
+@media (max-width: 600px) {
+  .responsive-navbar-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+.responsive-navbar-container .logo {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #000;
+}
+
+.responsive-navbar-container .logo h2 {
+  font-size: 3rem;
+  text-shadow: 3px 3px rgba(0, 0, 0, 0.3);
+}
+
+.responsive-navbar-container .hamburger {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.responsive-navbar-container .responsive-navbar {
+  position: absolute;
+  bottom: -350%;
+  left: 0;
+  height: 350%;
+  width: 100%;
+  background-color: white;
+}
+
+.responsive-navbar-container .responsive-navbar ul {
+  width: 100%;
+  height: 100%;
+}
+
+.responsive-navbar-container .responsive-navbar ul li {
+  position: relative;
+  width: 100%;
+  height: 20%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-left: 15px;
+}
+
+.responsive-navbar-container .responsive-navbar ul li::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 0;
+  background-color: black;
+  -webkit-transition: width .5s ease;
+  transition: width .5s ease;
+}
+
+.responsive-navbar-container .responsive-navbar ul li:hover::after {
+  width: 100%;
+}
+/*# sourceMappingURL=navbar.css.map */

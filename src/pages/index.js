@@ -1,0 +1,5 @@
+export {default as Home} from "./home"
+export {default as About} from "./about"
+export {default as PlacesVisited} from "./places-visited"
+export {default as BooksRead} from "./books-read"
+export {default as Contact} from "./contact"

@@ -1,0 +1,106 @@
+.contact-info {
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  -ms-grid-rows: auto;
+      grid-template-rows: auto;
+  padding: 75px 0 0 0;
+}
+
+@media (max-width: 650px) {
+  .contact-info {
+    padding: 25px 0 0 0;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+}
+
+.contact-info .location {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.contact-info .location .location-element {
+  margin-bottom: 20px;
+}
+
+.contact-info .location .location-element i {
+  margin-right: 18px;
+  font-size: 22px;
+}
+
+@media (max-width: 450px) {
+  .contact-info .location .location-element span {
+    font-size: 14px;
+  }
+}
+
+.contact-info .social-media {
+  background: -webkit-gradient(linear, left top, right top, color-stop(25%, #ededed), to(#ddd8d8));
+  background: linear-gradient(to right, #ededed 25%, #ddd8d8);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 100px;
+}
+
+@media (max-width: 950px) {
+  .contact-info .social-media {
+    padding: 0;
+  }
+}
+
+@media (max-width: 650px) {
+  .contact-info .social-media {
+    padding: 25px 8px;
+  }
+}
+
+.contact-info .social-media a i {
+  font-size: 1.8rem;
+}
+
+@media (max-width: 550px) {
+  .contact-info .social-media a i {
+    font-size: 1.4rem;
+  }
+}
+
+.contact-info .social-media a i.fa-facebook {
+  color: #4267B2;
+}
+
+.contact-info .social-media a i.fa-twitter {
+  color: #1DA1F2;
+}
+
+.contact-info .social-media a i.fa-instagram {
+  color: #C13584;
+}
+
+.contact-info .social-media a i.fa-github {
+  color: #333;
+}
+
+.contact-info .social-media a i.fa-linkedin {
+  color: #2867B2;
+}
+/*# sourceMappingURL=contact.css.map */
