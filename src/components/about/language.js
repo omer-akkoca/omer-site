@@ -1,13 +1,19 @@
 import React from 'react'
 
-export default function Language({language}) {
+const Language = ({language}) => {
 
-    const {id, icon, color, name} = language;
+    const {id, src, name} = language;
 
     return (
         <div key={id}>
-            <i className={icon} style={{color:`${color}`}}/>
+            <img
+                style={{width: "40px", height: "auto"}}
+                alt=""
+                src={src}
+            />
             <p>{name}</p>
         </div>
     )
 }
+
+export default Language;
